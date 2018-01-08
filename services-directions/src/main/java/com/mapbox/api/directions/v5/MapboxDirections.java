@@ -328,7 +328,7 @@ public abstract class MapboxDirections extends MapboxService<DirectionsResponse>
    */
   public static Builder builder() {
     return new AutoValue_MapboxDirections.Builder()
-      .baseUrl(Constants.BASE_API_URL)
+      .baseUrl("http://mapeditor.momenta.works:5000"/*Constants.BASE_API_URL*/)
       .profile(DirectionsCriteria.PROFILE_DRIVING)
       .user(DirectionsCriteria.PROFILE_DEFAULT_USER)
       .geometries(DirectionsCriteria.GEOMETRY_POLYLINE6);
