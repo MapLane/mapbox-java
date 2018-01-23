@@ -46,8 +46,8 @@ public abstract class RouteOptions {
    * @return string value representing the user
    * @since 3.0.0
    */
-  @NonNull
-  public abstract String user();
+//  @NonNull
+//  public abstract String user();
 
   /**
    * The same profile which was used during the request that resulted in this root directions
@@ -176,8 +176,8 @@ public abstract class RouteOptions {
    * @return a string representing the Mapbox access token
    * @since 3.0.0
    */
-  @NonNull
-  public abstract String accessToken();
+//  @NonNull
+//  public abstract String accessToken();
 
   /**
    * A universally unique identifier (UUID) for identifying and executing a similar specific route
@@ -187,8 +187,8 @@ public abstract class RouteOptions {
    * @return a string containing the request UUID
    * @since 3.0.0
    */
-  @NonNull
-  public abstract String requestUuid();
+//  @NonNull
+//  public abstract String requestUuid();
 
   /**
    * Gson type adapter for parsing Gson to this class.
@@ -216,7 +216,7 @@ public abstract class RouteOptions {
      * @return this builder for chaining options together
      * @since 3.0.0
      */
-    public abstract Builder user(@NonNull String user);
+//    public abstract Builder user(@NonNull String user);
 
     /**
      * The directions profile that was used during the request time and resulted in this responses
@@ -332,7 +332,7 @@ public abstract class RouteOptions {
      * @return this builder for chaining options together
      * @since 3.0.0
      */
-    public abstract Builder accessToken(@NonNull String accessToken);
+//    public abstract Builder accessToken(@NonNull String accessToken);
 
     /**
      * A universally unique identifier (UUID) for identifying and executing a similar specific route
@@ -342,7 +342,7 @@ public abstract class RouteOptions {
      * @return this builder for chaining options together
      * @since 3.0.0
      */
-    public abstract Builder requestUuid(@NonNull String requestUuid);
+//    public abstract Builder requestUuid(@NonNull String requestUuid);
 
     /**
      * The same exclusions the user originally made when the request was made.

@@ -99,10 +99,10 @@ public abstract class MapboxDirections extends MapboxService<DirectionsResponse>
 
     call = getService().getCall(
       ApiCallHelper.getHeaderUserAgent(clientAppName()),
-      user(),
+//      user(),
       profile(),
       formatCoordinates(coordinates()),
-      accessToken(),
+//      accessToken(),
       alternatives(),
       geometries(),
       overview(),
@@ -111,12 +111,13 @@ public abstract class MapboxDirections extends MapboxService<DirectionsResponse>
       bearing(),
       continueStraight(),
       annotation(),
-      language(),
-      roundaboutExits(),
-      voiceInstructions(),
-      bannerInstructions(),
-      voiceUnits(),
-      exclude());
+//      language(),
+//      roundaboutExits(),
+//      voiceInstructions(),
+      bannerInstructions()
+//      voiceUnits(),
+//      exclude()
+    );
 
     // Done
     return call;
@@ -201,15 +202,15 @@ public abstract class MapboxDirections extends MapboxService<DirectionsResponse>
           .annotations(annotation())
           .bearings(bearing())
           .alternatives(alternatives())
-          .language(language())
+//          .language(language())
           .radiuses(radius())
-          .user(user())
-          .voiceInstructions(voiceInstructions())
+//          .user(user())
+//          .voiceInstructions(voiceInstructions())
           .bannerInstructions(bannerInstructions())
-          .exclude(exclude())
-          .voiceUnits(voiceUnits())
-          .accessToken(accessToken())
-          .requestUuid(response.body().uuid())
+//          .exclude(exclude())
+//          .voiceUnits(voiceUnits())
+//          .accessToken(accessToken())
+//          .requestUuid(response.body().uuid())
           .build()
       ).build());
     }
@@ -340,7 +341,7 @@ public abstract class MapboxDirections extends MapboxService<DirectionsResponse>
    */
   public static Builder builder() {
     return new AutoValue_MapboxDirections.Builder()
-      .baseUrl("http://mapeditor.momenta.works:8080/osrm"/*Constants.BASE_API_URL*/)
+      .baseUrl("http://mapeditor.momenta.works:8080/osrm/"/*Constants.BASE_API_URL*/)
       .profile(DirectionsCriteria.PROFILE_DRIVING)
       .user(DirectionsCriteria.PROFILE_DEFAULT_USER)
       .geometries(DirectionsCriteria.GEOMETRY_POLYLINE6);

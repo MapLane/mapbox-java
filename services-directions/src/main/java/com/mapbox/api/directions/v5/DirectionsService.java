@@ -20,10 +20,10 @@ public interface DirectionsService {
    * {@link MapboxDirections.Builder}.
    *
    * @param userAgent          the user agent
-   * @param user               the user
+//   * @param user               the user
    * @param profile            the profile directions should use
    * @param coordinates        the coordinates the route should follow
-   * @param accessToken        Mapbox access token
+//   * @param accessToken        Mapbox access token
    * @param alternatives       define whether you want to receive more then one route
    * @param geometries         route geometry
    * @param overview           route full, simplified, etc.
@@ -36,25 +36,25 @@ public interface DirectionsService {
    * @param annotations        an annotations object that contains additional details about each
    *                           line segment along the route geometry. Each entry in an annotations
    *                           field corresponds to a coordinate along the route geometry
-   * @param language           language of returned turn-by-turn text instructions
-   * @param roundaboutExits    Add extra step when roundabouts occur with additional information for
-   *                           the user
-   * @param voiceInstructions  request that the response contain voice instruction information,
-   *                           useful for navigation
+//   * @param language           language of returned turn-by-turn text instructions
+//   * @param roundaboutExits    Add extra step when roundabouts occur with additional information for
+//   *                           the user
+//   * @param voiceInstructions  request that the response contain voice instruction information,
+//   *                           useful for navigation
    * @param bannerInstructions request that the response contain banner instruction information,
    *                           useful for navigation
-   * @param voiceUnits         voice units
-   * @param exclude            exclude tolls, motorways or more along your route
+//   * @param voiceUnits         voice units
+//   * @param exclude            exclude tolls, motorways or more along your route
    * @return the {@link DirectionsResponse} in a Call wrapper
    * @since 1.0.0
    */
-  @GET("directions/v5/{user}/{profile}/{coordinates}")
+  @GET("route/v1/{profile}/{coordinates}")
   Call<DirectionsResponse> getCall(
     @Header("User-Agent") String userAgent,
-    @Path("user") String user,
+//    @Path("user") String user,
     @Path("profile") String profile,
     @Path("coordinates") String coordinates,
-    @Query("access_token") String accessToken,
+//    @Query("access_token") String accessToken,
     @Query("alternatives") Boolean alternatives,
     @Query("geometries") String geometries,
     @Query("overview") String overview,
@@ -63,11 +63,11 @@ public interface DirectionsService {
     @Query("bearings") String bearings,
     @Query("continue_straight") Boolean continueStraight,
     @Query("annotations") String annotations,
-    @Query("language") String language,
-    @Query("roundabout_exits") Boolean roundaboutExits,
-    @Query("voice_instructions") Boolean voiceInstructions,
-    @Query("banner_instructions") Boolean bannerInstructions,
-    @Query("voice_units") String voiceUnits,
-    @Query("exclude") String exclude
+//    @Query("language") String language,
+//    @Query("roundabout_exits") Boolean roundaboutExits,
+//    @Query("voice_instructions") Boolean voiceInstructions,
+    @Query("banner_instructions") Boolean bannerInstructions
+//    @Query("voice_units") String voiceUnits,
+//    @Query("exclude") String exclude
   );
 }

@@ -82,6 +82,10 @@ public abstract class DirectionsRoute implements Serializable {
   @Nullable
   public abstract String geometry();
 
+  @Nullable
+  @SerializedName("adun_lanes")
+  public abstract List<String> adunLanes();
+
   /**
    * The calculated weight of the route.
    *
@@ -179,6 +183,8 @@ public abstract class DirectionsRoute implements Serializable {
      * @since 3.0.0
      */
     public abstract Builder geometry(@Nullable String geometry);
+
+    public abstract Builder adunLanes(@Nullable List<String> adunLanes);
 
     /**
      * The calculated weight of the route.
